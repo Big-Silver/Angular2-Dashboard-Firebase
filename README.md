@@ -10,6 +10,7 @@ This Angular2-Dashboard-Firebase example is written by [Big Silver].
 ## Pre-Requirement
 ```bash
 In app.module.ts
+
 export const firebaseConfig = {
   apiKey: "Your-ApiKey",
 	authDomain: "Your-AuthDomain",
@@ -18,6 +19,7 @@ export const firebaseConfig = {
 };
 
 In app.component.ts
+
 items: FirebaseListObservable<any[]>;
   constructor(af: AngularFire) {
   this.items = af.database.list('/Your-Database');
