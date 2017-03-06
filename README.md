@@ -1,6 +1,6 @@
 # Angular2-Dashboard-Firebase
 
-<img width="900" src="src/app/assets/img/angular2-dashboard-firebase.png" border="0" />
+<img width="900" src="src/assets/img/angular2-dashboard-firebase.png" border="0" />
 
 ## About
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
