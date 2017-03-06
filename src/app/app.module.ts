@@ -12,7 +12,6 @@ import { MailreadComponent } from './mailread/mailread.component';
 import { MailwriteComponent } from './mailwrite/mailwrite.component';
 import { ChatoptionComponent } from './chatoption/chatoption.component';
 import { ChatlayoutsComponent } from './chatlayouts/chatlayouts.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { MailService } from './mail.service';
 
@@ -22,7 +21,6 @@ const appRoutes: Routes = [
   { path: 'mailwrite', component: MailwriteComponent, pathMatch: 'full' },
   { path: 'chatoption', component: ChatoptionComponent, pathMatch: 'full' },
   { path: 'chatlayouts', component: ChatlayoutsComponent, pathMatch: 'full' },
-  { path: '**', component: PagenotfoundComponent, pathMatch: 'full' },
   { path: 'mail_read.html', redirectTo: '/mailread', pathMatch: 'full' },
   { path: 'mail_write.html', redirectTo: '/mailwrite', pathMatch: 'full' },
   { path: 'chat_options.html', redirectTo: '/chatoption', pathMatch: 'full' },
@@ -32,10 +30,10 @@ const appRoutes: Routes = [
 
 // Must export the config
 export const firebaseConfig = {
-  apiKey: "AIzaSyBf5lHeRgAHbj8GNHPgbKqiS-NOE9B0ZjE",
-	authDomain: "airhost-test-3771e.firebaseio.com",
-	databaseURL: "https://airhost-test-3771e.firebaseio.com",
-	storageBucket: "airhost-test-3771e.appspot.com"
+  apiKey: "Your-ApiKey",
+	authDomain: "Your-AuthDomain",
+	databaseURL: "Your DatabaseURL",
+	storageBucket: "Your-StorageBucket"
 };
 
 @NgModule({
@@ -53,7 +51,7 @@ export const firebaseConfig = {
     MailreadComponent, 
     MailwriteComponent,
     ChatoptionComponent, 
-    ChatlayoutsComponent, PagenotfoundComponent
+    ChatlayoutsComponent
   ],
   providers: [
     MailService
