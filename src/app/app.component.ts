@@ -13,8 +13,8 @@ import { MailService } from './mail.service';
 export class AppComponent { 
   items: FirebaseListObservable<any[]>;
   constructor(af: AngularFire) {
-    this.items = af.database.list('/tickets');
-   	var i = af.database.object('/tickets', { preserveSnapshot: true });
+    this.items = af.database.list('/Your-Database');
+   	var i = af.database.object('/Your-Database', { preserveSnapshot: true });
    	i.subscribe(snapshot => {
    		console.log(snapshot.val());
   	});

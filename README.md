@@ -8,12 +8,25 @@ Using Angular2, Theme and Firebase, create the Angular2-Dashboard-Firebase seed 
 This Angular2-Dashboard-Firebase example is written by [Big Silver].
 
 ## Pre-Requirement
+```bash
+In app.module.ts
 export const firebaseConfig = {
   apiKey: "Your-ApiKey",
 	authDomain: "Your-AuthDomain",
 	databaseURL: "Your DatabaseURL",
 	storageBucket: "Your-StorageBucket"
 };
+
+In app.component.ts
+items: FirebaseListObservable<any[]>;
+  constructor(af: AngularFire) {
+  this.items = af.database.list('/Your-Database');
+ 	var i = af.database.object('/Your-Database', { preserveSnapshot: true });
+ 	i.subscribe(snapshot => {
+ 		console.log(snapshot.val());
+	});
+}
+```
 
 ## Quick Start
 
